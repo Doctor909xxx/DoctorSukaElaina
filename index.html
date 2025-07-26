@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>𝐃𝐨𝐜𝐭𝐨𝐫 𝟗𝟎𝟗 - Developer & Pentester</title>
+    <link rel="icon" type="image/png" href="https://i.ibb.co/jPxvXhBj/475b587ad902a8773aaceccd54648370.jpg">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: url('https://files.catbox.moe/3gnpig.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+            text-align: center;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .intro {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: red;
+            font-size: 30px;
+            font-weight: bold;
+            opacity: 1;
+            transition: opacity 2s ease-in-out;
+            z-index: 10;
+        }
+
+        .container {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 30px;
+            border-radius: 15px;
+            max-width: 400px;
+            width: 90%;
+            box-shadow: 0px 0px 20px rgba(255, 0, 0, 0.7);
+            border: 2px solid red;
+            transition: 0.3s;
+            animation: fadeIn 2s ease-in-out forwards, floating 3s infinite ease-in-out;
+            opacity: 0;
+            margin-top: 50px; /* Biar nggak mentok ke atas */
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes floating {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .profile-img {
+            width: 100px;
+            border-radius: 50%;
+            border: 3px solid red;
+            padding: 5px;
+            margin-bottom: 15px;
+        }
+
+        h1 {
+            font-size: 26px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .link {
+            display: block;
+            background-color: #1a1a1a;
+            padding: 12px;
+            margin: 10px 0;
+            text-decoration: none;
+            color: white;
+            border-radius: 10px;
+            font-weight: 400;
+            border: 2px solid red;
+            transition: 0.3s ease-in-out;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .link::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 300%;
+            height: 300%;
+            background: rgba(255, 0, 0, 0.5);
+            transition: 0.5s ease-in-out;
+            transform: translate(-50%, -50%) scale(0);
+            border-radius: 50%;
+        }
+
+        .link:hover::before {
+            transform: translate(-50%, -50%) scale(1);
+        }
+
+        .link:hover {
+            transform: scale(1.05);
+            background-color: #333;
+            box-shadow: 0px 0px 10px rgba(255, 0, 0, 0.8);
+        }
+
+        .credit {
+            margin-top: 20px;
+            font-size: 12px;
+            color: white;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <div class="intro">𝐃𝐨𝐜𝐭𝐨𝐫 𝟗𝟎𝟗</div>
+    <div class="container">
+        <img src="https://i.ibb.co/jPxvXhBj/475b587ad902a8773aaceccd54648370.jpg" alt="Profile" class="profile-img">
+        <h1>𝐃𝐨𝐜𝐭𝐨𝐫 𝟗𝟎𝟗</h1>
+        <a href="https://github.com/Doctor909xxx" class="link">GitHub</a>
+        <a href="https://youtube.com/@0xDoctor909" class="link">YouTube</a>
+        <a href="https://instagram.com/0xdoctor909" class="link">Instagram</a>
+        <a href="" class="link">Website</a>
+        <a href="https://wa.me/message/PANI2ADA7J2OC1" class="link">WhatsApp</a>
+        <a href="https://t.me/LucifPride" class="link">Telegram</a>
+        <p class="credit">Credit by 𝐃𝐨𝐜𝐭𝐨𝐫 𝟗𝟎𝟗</p>
+    </div>
+    <script>
+        setTimeout(() => {
+            document.querySelector('.intro').style.opacity = '0';
+            setTimeout(() => { document.querySelector('.intro').style.display = 'none'; }, 2000);
+            document.querySelector('.container').style.opacity = '1';
+        }, 2000);
+    </script>
+</body>
+</html>
